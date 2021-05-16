@@ -26,7 +26,7 @@ O TypeScript não reconhece sozinho que `jest.mock('foo')` adiciona métodos aos
 ## Referências
 
 - Jest:
-  - [indicação do `ts-jest` para checar tipagem](<(https://jestjs.io/docs/getting-started#using-typescript)>);
+  - [indicação do `ts-jest` para checar tipagem](https://jestjs.io/docs/getting-started#using-typescript);
 - ts-jest:
   - [Repo](https://github.com/kulshekhar/ts-jest);
   - [Docs](https://kulshekhar.github.io/ts-jest/).
