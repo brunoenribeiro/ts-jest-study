@@ -16,6 +16,14 @@ describe('mocks', () => {
       expect(mockCallback.mock.results[0].value).toBe(42);
       expect(mockCallback.mock.results[1].value).toBe(43);
     });
+
+    
+    test('mock snapshot', () => {
+      const mockCallback = jest.fn(x => 42 + x);
+      forEach<number>([0,1], mockCallback);
+
+      expect(mockCallback).toMatchSnapshot();
+    });
   });
 
   describe('class instantiation', () => {
@@ -36,6 +44,6 @@ describe('mocks', () => {
 
       expect(mock()).toBe(10);
       expect(mock()).toBe(20);
-    })
+    });
   });
 });

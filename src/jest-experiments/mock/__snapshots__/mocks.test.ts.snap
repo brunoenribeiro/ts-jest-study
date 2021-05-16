@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mocks jest.fn mock snapshot 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      0,
+    ],
+    Array [
+      1,
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": 42,
+    },
+    Object {
+      "type": "return",
+      "value": 43,
+    },
+  ],
+}
+`;
