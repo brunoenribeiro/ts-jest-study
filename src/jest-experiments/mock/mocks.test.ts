@@ -17,7 +17,13 @@ describe('mocks', () => {
       expect(mockCallback.mock.results[1].value).toBe(43);
     });
 
-    
+    test('test last call match', () => {
+      const mockCallback = jest.fn(x => 42 + x);
+      forEach<number>([0,1], mockCallback);
+
+      expect(mockCallback).toHaveBeenLastCalledWith(1);
+    });
+
     test('mock snapshot', () => {
       const mockCallback = jest.fn(x => 42 + x);
       forEach<number>([0,1], mockCallback);
