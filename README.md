@@ -16,6 +16,13 @@ Jest é compatível com TypeScript via Babel.
 
 Para tal, a documentação do jest indica instalar `ts-jest`.
 
+### Tipagem de módulos mockados
+
+O TypeScript não reconhece sozinho que `jest.mock('foo')` adiciona métodos aos módulos. É preciso avisá-lo de outras maneiras.
+
+- Sem `ts-jest`, elencar módulo com `(foo as unknown) as jest.Mock<Foo>`: [link](https://stackoverflow.com/questions/48759035/mock-dependency-in-jest-with-typescript/52366601#comment108370458_52366601);
+- Com `ts-jest`, usar util `mocked`: [link](https://stackoverflow.com/a/60007123/7948938).
+
 ## Referências
 
 - Jest:
